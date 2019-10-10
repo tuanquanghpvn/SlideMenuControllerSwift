@@ -6,6 +6,7 @@
 
 import Foundation
 import UIKit
+import DynamicBlurView
 
 @objc public protocol SlideMenuControllerDelegate {
     @objc optional func leftWillOpen()
@@ -69,7 +70,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     open weak var delegate: SlideMenuControllerDelegate?
     
     open var opacityView = UIView()
-    open var blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
+    open var blurView = DynamicBlurView()
     open var shadowView = UIView()
     open var mainContainerView = UIView()
     open var leftContainerView = UIView()
@@ -539,9 +540,9 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         self.shadowView.isUserInteractionEnabled = false
         self.view.addSubview(self.shadowView)
         
-        self.blurView.alpha = 0.95
+        self.blurView = DynamicBlurView(frame: self.view.bounds)
+        self.blurView.blurRadius = 6
         self.blurView.clipsToBounds = true
-        self.blurView.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.11).cgColor
         self.blurView.layer.shadowColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.11).cgColor
         self.blurView.layer.shadowOffset = CGSize.zero
         self.blurView.layer.shadowRadius = 10
