@@ -10,6 +10,9 @@
 		0E75C5A31BE3CA9F00844634 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA8AA51A43E2EF00863FB9 /* SlideMenuController.swift */; };
 		0E75C5A61BE3CAFE00844634 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E75C5A41BE3CAFE00844634 /* Info.plist */; };
 		0EB8EBFF1BE3CF3C00BC2A99 /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E75C5A51BE3CAFE00844634 /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3593F915D8A7F7FF171491B9 /* Pods_SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B158F28179C576B2B331D0 /* Pods_SlideMenuControllerSwift.framework */; };
+		3593FECAF767E496EAF341A7 /* Pods_SlideMenuControllerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEF3AED47F49CC0547B0A8D /* Pods_SlideMenuControllerSwiftTests.framework */; };
+		5917FDFDA354C6611D799E03 /* Pods_SlideMenuControllerSwift_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB13D0BB087D175F114F254 /* Pods_SlideMenuControllerSwift_iOS.framework */; };
 		C539E6471A315E87003B7CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539E6461A315E87003B7CC7 /* AppDelegate.swift */; };
 		C539E64A1A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C539E6481A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld */; };
 		C539E64C1A315E87003B7CC7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539E64B1A315E87003B7CC7 /* MainViewController.swift */; };
@@ -56,6 +59,12 @@
 		0E75C5961BE3CA7900844634 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E75C5A41BE3CAFE00844634 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		0E75C5A51BE3CAFE00844634 /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = Source/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
+		170BD6668F6531C866F052D6 /* Pods-SlideMenuControllerSwift-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuControllerSwift-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SlideMenuControllerSwift-iOS/Pods-SlideMenuControllerSwift-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1CEF3AED47F49CC0547B0A8D /* Pods_SlideMenuControllerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuControllerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B158F28179C576B2B331D0 /* Pods_SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0443C5619F72C23D21CE70 /* Pods-SlideMenuControllerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuControllerSwift.debug.xcconfig"; path = "Target Support Files/Pods-SlideMenuControllerSwift/Pods-SlideMenuControllerSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		9D9F1E21689F1147FCC9EF61 /* Pods-SlideMenuControllerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuControllerSwift.release.xcconfig"; path = "Target Support Files/Pods-SlideMenuControllerSwift/Pods-SlideMenuControllerSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B0A284F9E2E391CE1E306AAA /* Pods-SlideMenuControllerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuControllerSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-SlideMenuControllerSwiftTests/Pods-SlideMenuControllerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		C539E6411A315E87003B7CC7 /* SlideMenuControllerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideMenuControllerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539E6451A315E87003B7CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C539E6461A315E87003B7CC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +99,9 @@
 		C5F179CD1BEB2A5900EEDD9A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C5F179CF1BEB2CB500EEDD9A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C5F179D11BEB2FAF00EEDD9A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		DC8A47B656C8918FB4A3051B /* Pods-SlideMenuControllerSwift-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuControllerSwift-iOS.release.xcconfig"; path = "Target Support Files/Pods-SlideMenuControllerSwift-iOS/Pods-SlideMenuControllerSwift-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		ECB13D0BB087D175F114F254 /* Pods_SlideMenuControllerSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideMenuControllerSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA02EF6A709ABDA34E7D4064 /* Pods-SlideMenuControllerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideMenuControllerSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-SlideMenuControllerSwiftTests/Pods-SlideMenuControllerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5917FDFDA354C6611D799E03 /* Pods_SlideMenuControllerSwift_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3593F915D8A7F7FF171491B9 /* Pods_SlideMenuControllerSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,18 +125,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3593FECAF767E496EAF341A7 /* Pods_SlideMenuControllerSwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09B0A4FDF8E269337D807D9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D0443C5619F72C23D21CE70 /* Pods-SlideMenuControllerSwift.debug.xcconfig */,
+				9D9F1E21689F1147FCC9EF61 /* Pods-SlideMenuControllerSwift.release.xcconfig */,
+				170BD6668F6531C866F052D6 /* Pods-SlideMenuControllerSwift-iOS.debug.xcconfig */,
+				DC8A47B656C8918FB4A3051B /* Pods-SlideMenuControllerSwift-iOS.release.xcconfig */,
+				FA02EF6A709ABDA34E7D4064 /* Pods-SlideMenuControllerSwiftTests.debug.xcconfig */,
+				B0A284F9E2E391CE1E306AAA /* Pods-SlideMenuControllerSwiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0E75C5A71BE3CB0D00844634 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				0E75C5A41BE3CAFE00844634 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B26DD73C2506F7E1D24F6F56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77B158F28179C576B2B331D0 /* Pods_SlideMenuControllerSwift.framework */,
+				ECB13D0BB087D175F114F254 /* Pods_SlideMenuControllerSwift_iOS.framework */,
+				1CEF3AED47F49CC0547B0A8D /* Pods_SlideMenuControllerSwiftTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C539E6381A315E87003B7CC7 = {
@@ -132,6 +171,8 @@
 				C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */,
 				C539E65C1A315E87003B7CC7 /* SlideMenuControllerSwiftTests */,
 				C539E6421A315E87003B7CC7 /* Products */,
+				09B0A4FDF8E269337D807D9D /* Pods */,
+				B26DD73C2506F7E1D24F6F56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +307,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E75C5A11BE3CA7900844634 /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift-iOS" */;
 			buildPhases = (
+				47F8F3EBEAAB57D4DAA3E5EF /* [CP] Check Pods Manifest.lock */,
 				0E75C5911BE3CA7900844634 /* Sources */,
 				0E75C5921BE3CA7900844634 /* Frameworks */,
 				0E75C5931BE3CA7900844634 /* Headers */,
@@ -284,6 +326,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C539E6631A315E87003B7CC7 /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift" */;
 			buildPhases = (
+				89EEB829C3EA414541FE80B6 /* [CP] Check Pods Manifest.lock */,
 				C539E63D1A315E87003B7CC7 /* Sources */,
 				C539E63E1A315E87003B7CC7 /* Frameworks */,
 				C539E63F1A315E87003B7CC7 /* Resources */,
@@ -301,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C539E6661A315E87003B7CC7 /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwiftTests" */;
 			buildPhases = (
+				722B7DD4C59E13DE2C65B1AB /* [CP] Check Pods Manifest.lock */,
 				C539E6551A315E87003B7CC7 /* Sources */,
 				C539E6561A315E87003B7CC7 /* Frameworks */,
 				C539E6571A315E87003B7CC7 /* Resources */,
@@ -391,6 +435,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47F8F3EBEAAB57D4DAA3E5EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlideMenuControllerSwift-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		722B7DD4C59E13DE2C65B1AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlideMenuControllerSwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89EEB829C3EA414541FE80B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlideMenuControllerSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E75C5911BE3CA7900844634 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -470,6 +583,7 @@
 /* Begin XCBuildConfiguration section */
 		0E75C59F1BE3CA7900844634 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 170BD6668F6531C866F052D6 /* Pods-SlideMenuControllerSwift-iOS.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -495,6 +609,7 @@
 		};
 		0E75C5A01BE3CA7900844634 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC8A47B656C8918FB4A3051B /* Pods-SlideMenuControllerSwift-iOS.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
@@ -621,6 +736,7 @@
 		};
 		C539E6641A315E87003B7CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D0443C5619F72C23D21CE70 /* Pods-SlideMenuControllerSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlideMenuControllerSwift/Info.plist;
@@ -635,6 +751,7 @@
 		};
 		C539E6651A315E87003B7CC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D9F1E21689F1147FCC9EF61 /* Pods-SlideMenuControllerSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlideMenuControllerSwift/Info.plist;
@@ -650,6 +767,7 @@
 		};
 		C539E6671A315E87003B7CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA02EF6A709ABDA34E7D4064 /* Pods-SlideMenuControllerSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -668,6 +786,7 @@
 		};
 		C539E6681A315E87003B7CC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0A284F9E2E391CE1E306AAA /* Pods-SlideMenuControllerSwiftTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
