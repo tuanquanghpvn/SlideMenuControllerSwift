@@ -8,6 +8,26 @@ import Foundation
 import UIKit
 import DynamicBlurView
 
+extension UIApplication {
+    var statusBarUIView: UIView? {
+        if #available(iOS 13.0, *) {
+            let tag = 999
+            if let statusBar = keyWindow?.viewWithTag(tag) {
+                return statusBar
+            } else {
+                let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+                statusBarView.tag = tag
+                keyWindow?.addSubview(statusBarView)
+                return statusBarView
+            }
+        } else if responds(to: Selector(("statusBar"))) {
+            return value(forKey: "statusBar") as? UIView
+        } else {
+            return nil
+        }
+    }
+}
+
 @objc public protocol SlideMenuControllerDelegate {
     @objc optional func leftWillOpen()
     @objc optional func leftDidOpen()
@@ -195,7 +215,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //automatically called 
+        //automatically called
         //self.mainViewController?.viewWillAppear(animated)
     }
     
@@ -217,9 +237,9 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         setUpViewController(rightContainerView, targetViewController: rightViewController)
     }
     
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return self.mainViewController?.preferredStatusBarStyle ?? .default
-    }
+    //    open override var preferredStatusBarStyle: UIStatusBarStyle {
+    //        return .default
+    //    }
     
     open override func openLeft() {
         guard let _ = leftViewController else { // If leftViewController is nil, then return
@@ -516,6 +536,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     open func openLeftWithVelocity(_ velocity: CGFloat) {
+        UIApplication.shared.statusBarUIView?.backgroundColor = .black
         let xOrigin: CGFloat = leftContainerView.frame.origin.x
         let finalXOrigin: CGFloat = 0.0
         
@@ -530,20 +551,20 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         
         addShadowToView(leftContainerView)
         
-        self.shadowView.alpha = 0.6
-        self.shadowView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
-        self.shadowView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        self.shadowView.layer.shadowOffset = CGSize.zero
-        self.shadowView.layer.shadowRadius = 10
-        self.shadowView.layer.shadowOpacity = 0.1
-        self.shadowView.layer.cornerRadius = 10
-        self.shadowView.isUserInteractionEnabled = false
-        self.view.addSubview(self.shadowView)
+        //        self.shadowView.alpha = 0.6
+        //        self.shadowView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        //        self.shadowView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        //        self.shadowView.layer.shadowOffset = CGSize.zero
+        //        self.shadowView.layer.shadowRadius = 10
+        //        self.shadowView.layer.shadowOpacity = 0.1
+        //        self.shadowView.layer.cornerRadius = 10
+        //        self.shadowView.isUserInteractionEnabled = false
+        //        self.view.addSubview(self.shadowView)
         
         self.blurView = DynamicBlurView(frame: self.view.bounds)
         self.blurView.blurRadius = 6
         self.blurView.clipsToBounds = true
-        self.blurView.layer.shadowColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.11).cgColor
+        self.blurView.layer.shadowColor = UIColor.darkGray.cgColor
         self.blurView.layer.shadowOffset = CGSize.zero
         self.blurView.layer.shadowRadius = 10
         self.blurView.layer.shadowOpacity = 0.8
@@ -559,8 +580,8 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
                 
                 //                SlideMenuOptions.contentViewDrag == true ? (strongSelf.mainContainerView.transform = CGAffineTransform(translationX: SlideMenuOptions.leftViewWidth, y: 0)) : (strongSelf.mainContainerView.transform = CGAffineTransform(scaleX: SlideMenuOptions.contentViewScale, y: SlideMenuOptions.contentViewScale))
                 
-//                strongSelf.shadowView.alpha = 1.0
-//                strongSelf.blurView.alpha = 1.0
+                //                strongSelf.shadowView.alpha = 1.0
+                //                strongSelf.blurView.alpha = 1.0
                 
                 var t = CGAffineTransform.identity
                 t = t.translatedBy(x: SlideMenuOptions.leftViewWidth, y: 0)
@@ -568,8 +589,11 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
                 strongSelf.mainContainerView.transform = t
                 strongSelf.mainContainerView.layer.cornerRadius = 10
                 strongSelf.mainContainerView.clipsToBounds = true
-                
-                strongSelf.shadowView.frame = strongSelf.mainContainerView.frame
+                strongSelf.mainViewController?.view.layer.shadowColor = UIColor.darkGray.cgColor
+                strongSelf.mainViewController?.view.layer.shadowOffset = CGSize.zero
+                strongSelf.mainViewController?.view.layer.shadowRadius = 10
+                strongSelf.mainViewController?.view.layer.shadowOpacity = 0.8
+                strongSelf.shadowView.frame = CGRect(x: 0, y: 0, width: 10, height: strongSelf.mainContainerView.frame.height)
                 strongSelf.blurView.frame = strongSelf.mainContainerView.frame
             }
         }) { [weak self] (Bool) -> Void in
@@ -584,7 +608,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     open func openRightWithVelocity(_ velocity: CGFloat) {
         let xOrigin: CGFloat = rightContainerView.frame.origin.x
         
-        //	CGFloat finalXOrigin = SlideMenuOptions.rightViewOverlapWidth
+        //    CGFloat finalXOrigin = SlideMenuOptions.rightViewOverlapWidth
         let finalXOrigin: CGFloat = view.bounds.width - rightContainerView.frame.size.width
         
         var frame = rightContainerView.frame
@@ -615,7 +639,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     open func closeLeftWithVelocity(_ velocity: CGFloat) {
-        
+        UIApplication.shared.statusBarUIView?.backgroundColor = .clear
         let xOrigin: CGFloat = leftContainerView.frame.origin.x
         let finalXOrigin: CGFloat = leftMinOrigin()
         
@@ -635,7 +659,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
                 strongSelf.leftContainerView.frame = frame
                 strongSelf.opacityView.layer.opacity = 0.0
                 strongSelf.mainContainerView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                
+                strongSelf.mainContainerView.clipsToBounds = false
                 strongSelf.blurView.alpha = 0.0
                 strongSelf.shadowView.alpha = 0.0
                 strongSelf.shadowView.frame = strongSelf.mainContainerView.frame
@@ -1133,3 +1157,4 @@ extension UIViewController {
         }
     }
 }
+
