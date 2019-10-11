@@ -219,6 +219,11 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         //self.mainViewController?.viewWillAppear(animated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarUIView?.backgroundColor = .clear
+    }
+    
     open override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         if let mainController = self.mainViewController{
             return mainController.supportedInterfaceOrientations
